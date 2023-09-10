@@ -1,0 +1,33 @@
+/* 类选择器 */
+.div1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.div2 {
+    width: 100px;
+    height: 100px;
+    background-color:blue;
+}
+
+.border {
+    border: 15px solid black;
+}
+
+/* #d选择器 */
+#main {
+    width: 100px;
+    height: 100px;
+    background-color:green; 
+}
+
+/* 对所有div生效  层叠性 */
+div {
+    font-size: larger;
+}
+
+/* 对body全局配置 */
+body {
+    background-color: yellow;
+}

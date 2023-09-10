@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "E:\\Python3.9\\python.exe",
+    "python.analysis.extraPaths": [
+        "./code"
+    ],
+    "git.ignoreLimitWarning": true
+}

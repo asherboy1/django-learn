@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "f:\\code\\django-learn\\code\\venv\\Scripts\\python.exe",
+    "editor.fontLigatures": null,
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+
+}

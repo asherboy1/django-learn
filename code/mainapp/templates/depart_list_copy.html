@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container">
+    <div style="margin-bottom: 10px;">
+        <a class="btn btn-primary" href="/depart/add/page" target="_blank">
+            <span class="glyphicon glyphicon-plus"></span>
+            新建部门</a>
+    </div>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-th-list" arir-hideen="true"></span>
+                部门列表</div>
+            <!-- Table -->
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>部门名称</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody class="list_no">
+                {% for obj in department_query%}
+                <tr>
+                  <th scope="row">{{ obj.list_no }}</th>
+                  <td>{{ obj.depart_name }}</td>
+                  <td>
+                      <a class="btn btn-success btn-xs" href="/depart/modify/page/?id={{ obj.id }}">编辑</a>
+                      {% comment %} <a class="btn btn-success btn-xs" href="/depart/modify/{{ obj.id }}/edit">编辑</a> {% endcomment %}
+                      <a class="btn btn-danger btn-xs" href="/depart/delete/?id={{ obj.id }}">删除</a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div></div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign in</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/iconfont.css'%}"
+    />
+  </head>
+  <body>
+    <form method="POST" action="">
+      {% csrf_token %}
+      <div id="login-box">
+        <h1>用户管理系统</h1>
+        <div class="input-box">
+          <i class="iconfont">&#xe609;</i>
+          <input type="text" name="username" placeholder="UserName" />
+        </div>
+        <div class="input-box">
+          <i class="iconfont">&#xe605;</i>
+          <input type="text" name="password" placeholder="UserPassword" />
+        </div>
+        <button type="submit" name="submit">Sign in</button>
+        <div><span style="color: rgb(245, 8, 55)">{{error_msg}}</span></div>
+      </div>
+    </form>
+  </body>
+</html>
